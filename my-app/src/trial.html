@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+        #chart-container {
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="chart-container">
+        <canvas id="chartjs-pie"></canvas>
+    </div>
+
+    <script>
+        // Define the pie chart
+        new Chart(document.getElementById("chartjs-pie"), {
+            type: "pie",
+            data: {
+                labels: ["Social", "Search Engines", "Direct", "Other"],
+                datasets: [{
+                    data: [260, 125, 54, 146],
+                    backgroundColor: [
+                        "#007bff", // Primary color
+                        "#28a745", // Success color
+                        "#ffc107", // Warning color
+                        "#dee2e6"  // Gray
+                    ],
+                    borderColor: "transparent" // Transparent borders
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                cutout: "65%", // Doughnut-like center cutout (replacing deprecated `cutoutPercentage`)
+                plugins: {
+                    legend: {
+                        position: "bottom"
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
