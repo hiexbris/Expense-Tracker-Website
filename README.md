@@ -1,6 +1,6 @@
 # 💸 Full-Stack Expense Tracker
 
-A complete **Expense Tracker** app built with **React (frontend)** and **Express.js (backend)**. Track your income and expenses, categorize your spending, and manage your budget — all in one simple app.
+A complete **Expense Tracker** app built with **MERN STACK**. Track your income and expenses, categorize your spending, and manage your budget — all in one simple app.
 
 ---
 
